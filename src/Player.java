@@ -20,4 +20,18 @@ public class Player {
 
    }
 
+      public Hand getHand() {
+
+       return this.hand;
+
+   }
+
+
+
+   public void setHand(Hand hand) {
+
+       this.hand = hand;
+
+   }
+
 }
