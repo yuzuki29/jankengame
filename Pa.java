@@ -1,6 +1,6 @@
-public class Gu implements Hand {
+public class Pa implements Hand {
 
-   private String HAND_NAME = "グー";
+   private String HAND_NAME = "パー";
 
 
 
@@ -18,13 +18,21 @@ public class Gu implements Hand {
 
    public int compare(Hand hand) {
 
-       //TODO:例外の処理
+       if(hand instanceof Gu) {    //グー　vs パー（自分）
 
-       return 0; //TODO 仮の返り値
+           return 1;
+
+       } else if(hand instanceof Pa) {    //チョキ　vs パー（自分）
+
+           return -1;
+
+       } else {
+
+           return 0;    //グー　vs グー（自分）
+
+       }
 
    }
-
-
 
    public String getHandName() {
 

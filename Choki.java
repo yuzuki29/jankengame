@@ -16,20 +16,29 @@ public class Choki implements Hand {
 
     */
 
+
    public int compare(Hand hand) {
 
-       //TODO:例外の処理
+       if(hand instanceof Gu) {    //グー　vs チョキ（自分）
 
-       return 0; //TODO 仮の返り値
+           return -1;
+
+       } else if(hand instanceof Pa) {    //パー　vs チョキ（自分）
+
+           return 1;
+
+       } else {
+
+           return 0;    //グー　vs グー（自分）
+
+       }
 
    }
 
 
 
-   public String getHandName() {
+    public String getHandName() {
 
-       return this.HAND_NAME;
+        return this.HAND_NAME;
 
-   }
-
-}
+    }
